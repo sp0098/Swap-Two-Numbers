@@ -1,52 +1,22 @@
-# Prerequisites
-*.d
+#include<stdio.h>
+int main() {
+  double first, second, temp;
+  printf("Enter first number: ");
+  scanf("%lf", &first);
+  printf("Enter second number: ");
+  scanf("%lf", &second);
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+  // value of first is assigned to temp
+  temp = first;
 
-# Linker output
-*.ilk
-*.map
-*.exp
+  // value of second is assigned to first
+  first = second;
 
-# Precompiled Headers
-*.gch
-*.pch
+  // value of temp (initial value of first) is assigned to second
+  second = temp;
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+  // %.2lf displays number up to 2 decimal points
+  printf("\nAfter swapping, first number = %.2lf\n", first);
+  printf("After swapping, second number = %.2lf", second);
+  return 0;
+}
